@@ -1,0 +1,23 @@
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: ishirock-microservice
+spec:
+  hosts:
+  - "store.23.101.20.50.xip.io"
+  gateways:
+  - ishirock-gateway
+  http:
+  - match:
+    - uri:
+        prefix: "/catalog/"
+    - uri:
+        prefix: "/catalog"
+    rewrite:
+      uri: "/"
+    route:
+    - destination:
+        host: catalog-service
+        port:
+          number: 80

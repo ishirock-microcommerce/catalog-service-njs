@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  web:
+    image: venkateshbr/catalog-service
+    ports:
+    - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - MONGO_DB_URL=mongodb://mongo:27017/catalog
+    depends_on:
+    - mongo
+  mongo:
+    image: mongo
+    ports:
+    - "27017:27017"

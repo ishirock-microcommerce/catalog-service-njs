@@ -1,0 +1,15 @@
+stages:
+- name: Build
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: npm install
+- name: Deploy
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: node-rancher
+      pushRemote: true
+      registry: venk-rancher.southeastasia.cloudapp.azure.com
+timeout: 60

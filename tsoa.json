@@ -1,0 +1,13 @@
+{
+    "routes": {
+        "entryFile": "./src/index.ts",
+        "routesDir": "./src/routes",
+        "basePath": "/"
+    },
+
+    "swagger": {
+        "outputDirectory": "./src/swagger",
+        "entryFile": "./src/index.ts",
+        "basePath": "/"
+    }
+}
