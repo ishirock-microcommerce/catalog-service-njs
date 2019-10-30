@@ -1,5 +1,4 @@
 import * as http from "http";
-import * as express from "express";
 import app from "./app";
 import "./controllers/productController";
 
