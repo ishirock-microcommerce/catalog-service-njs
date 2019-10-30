@@ -18,13 +18,13 @@ gulp.task('scripts', () => {
 });
 
 gulp.task('copy', function () {
-    gulp.src('./src/config/products.json')
+   return gulp.src('./src/config/products.json')
         .pipe(gulp.dest('dist/config/'));
 });
 
-gulp.task('watch', ['scripts'], () => {
+gulp.task('watch', gulp.series('scripts'), () => {
     gulp.watch('src/**/*.ts', ['scripts']);
 });
  
 
-gulp.task('default', ['scripts', 'swagger','copy']);
+gulp.task('default', gulp.series('scripts', 'swagger','copy'));
