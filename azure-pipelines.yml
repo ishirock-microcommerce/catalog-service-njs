@@ -36,5 +36,5 @@ stages:
         repository: '$(imageName)'
         command: 'push'
         tags: |
-          '$(tag)'
+          $(tag)
           latest
