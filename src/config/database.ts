@@ -11,7 +11,7 @@ let productsData = require('../config/products.json')
 let isProduction = process.env.NODE_ENV === 'production'
 console.info(`Production environment is ${isProduction}`)
 
-let mongoDbUri = process.env.MONGO_DB_URL || 'mongodb://localhost:27017/catalog'
+let mongoDbUri = process.env.MONGO_DB_URL || 'mongodb+srv://admin:admin123@cluster0-fc84o.azure.mongodb.net/store?retryWrites=true&w=majority'
 
 if (mongoose.connection.readyState == 0) {
   mongoose.set('debug', true)

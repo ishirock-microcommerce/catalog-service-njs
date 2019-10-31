@@ -5,10 +5,11 @@ import { RegisterRoutes} from "./routes/routes";
 import * as swaggerUI from "swagger-ui-express";
 import { mongoose, mongoDbUri } from './config/database';   
 
-let app: express.Application = express();
+let app: express.Express = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(methodOverride());
+
 
 RegisterRoutes(app);
 
