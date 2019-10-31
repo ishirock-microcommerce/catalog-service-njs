@@ -28,7 +28,9 @@ stages:
         repository: '$(imageName)'
         command: 'build'
         Dockerfile: '**/Dockerfile'
-        tags: '$(tag)'
+        tags: |
+          $(tag)
+          latest
     - task: Docker@2
       displayName: Push image
       inputs:
