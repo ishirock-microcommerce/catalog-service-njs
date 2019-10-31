@@ -25,6 +25,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'dockerhub'
+        repository: '$(imageName)'
         command: 'build'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
