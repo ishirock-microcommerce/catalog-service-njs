@@ -21,7 +21,7 @@
     "chai-http": "^4.2.0",
     "concurrently": "^4.1.0",
     "dotenv": "^6.2.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "gulp": "^4.0.2",
     "gulp-run": "^1.7.1",
     "gulp-typescript": "^5.0.1",
